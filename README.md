@@ -26,3 +26,7 @@ opam install bentov
 # Documentation
 
 See https://barko.github.io/bentov
+
+# License
+
+BSD
