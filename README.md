@@ -16,3 +16,13 @@ echo "" | awk '{ for ( i=0 ; i < 1e6 ; i++ ) { print rand() } }' | bt -n 20 -u 1
 
 In this example, the size of the approximating histogram is 20.  For
 additional details, `bt --help` .
+
+To install:
+
+```sh
+opam install bentov
+```
+
+# Documentation
+
+See https://barko.github.io/bentov
