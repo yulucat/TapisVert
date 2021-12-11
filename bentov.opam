@@ -6,4 +6,5 @@ maintainer: ["mika@illouz.net"]
 authors: ["Mika Illouz"]
 license: "BSD"
 homepage: "https://github.com/barko/bentov"
-doc: "https://barko.github.io/b
+doc: "https://barko.github.io/bentov/"
+bug-repo
