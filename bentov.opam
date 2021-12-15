@@ -9,4 +9,4 @@ homepage: "https://github.com/barko/bentov"
 doc: "https://barko.github.io/bentov/"
 bug-reports: "https://github.com/barko/bentov/issues"
 depends: [
-  "dune" {>
+  "dune" {> "1.5"
