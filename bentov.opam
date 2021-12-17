@@ -11,4 +11,6 @@ bug-reports: "https://github.com/barko/bentov/issues"
 depends: [
   "dune" {> "1.5"}
   "cmdliner" {>= "1.0.4"}
-  "ocaml" {>= "4.08.0
+  "ocaml" {>= "4.08.0"}
+]
+build
