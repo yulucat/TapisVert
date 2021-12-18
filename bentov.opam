@@ -13,4 +13,5 @@ depends: [
   "cmdliner" {>= "1.0.4"}
   "ocaml" {>= "4.08.0"}
 ]
-build
+build: [
+  ["
