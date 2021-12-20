@@ -16,4 +16,5 @@ depends: [
 build: [
   ["dune" "subst"] {pinned}
   [
+    "dune"
   
