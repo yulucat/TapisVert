@@ -17,4 +17,5 @@ build: [
   ["dune" "subst"] {pinned}
   [
     "dune"
-    "bu
+    "build"
+    "-p
