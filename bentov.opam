@@ -21,4 +21,5 @@ build: [
     "-p"
     name
     "-j"
-    j
+    jobs
+    "
