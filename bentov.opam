@@ -25,3 +25,6 @@ build: [
     "@install"
     "@doc" {with-doc}
   ]
+]
+
+dev-
