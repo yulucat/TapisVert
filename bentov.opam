@@ -23,4 +23,5 @@ build: [
     "-j"
     jobs
     "@install"
-    "@doc" {wit
+    "@doc" {with-doc}
+  ]
