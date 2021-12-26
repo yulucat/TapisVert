@@ -1,1 +1,1 @@
-(lang dun
+(lang dune 2.5)
