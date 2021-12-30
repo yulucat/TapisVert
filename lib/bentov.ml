@@ -17,3 +17,19 @@ let max_bins h =
 
 let num_bins h =
   h.num_bins
+
+let bins h =
+  h.bins
+
+let range h =
+  h.range
+
+let total_count h =
+  h.total_count
+
+(* not tail rec! *)
+let rec insert value = function
+  | [] -> [{ center = value ; count = 1 }], true
+  | h :: t ->
+    if value < h.center then
+      { center = value ; count = 1 } :: h :: t, true
