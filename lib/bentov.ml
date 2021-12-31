@@ -47,3 +47,11 @@ let rec min_diff_index i index min_diff = function
       min_diff_index (i+1) i diff (b :: t)
     else
       (* no change *)
+      min_diff_index (i+1) index min_diff (b :: t)
+
+  | [ _ ] -> index
+  | [] -> assert false
+
+let min_diff_index = function
+  | a :: b :: t ->
+    let diff = b.center -. a.center in
