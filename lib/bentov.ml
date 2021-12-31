@@ -41,3 +41,9 @@ let rec insert value = function
 
 let rec min_diff_index i index min_diff = function
   | a :: b :: t ->
+    let diff = b.center -. a.center in
+    assert ( diff > 0. );
+    if diff < min_diff then
+      min_diff_index (i+1) i diff (b :: t)
+    else
+      (* no change *)
