@@ -55,3 +55,13 @@ let rec min_diff_index i index min_diff = function
 let min_diff_index = function
   | a :: b :: t ->
     let diff = b.center -. a.center in
+    assert ( diff > 0. );
+    min_diff_index 1 0 diff (b :: t)
+
+  | [ _ ]
+  | [] -> assert false
+
+let merge_bins lo hi =
+  assert (lo.center < hi.center);
+  let sum_count = lo.count + hi.count in
+  let center =
