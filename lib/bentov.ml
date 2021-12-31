@@ -33,3 +33,11 @@ let rec insert value = function
   | h :: t ->
     if value < h.center then
       { center = value ; count = 1 } :: h :: t, true
+    else if value = h.center then
+      { h with count = h.count + 1 } :: t, false
+    else
+      let t, num_bins_is_incr = insert value t in
+      h :: t, num_bins_is_incr
+
+let rec min_diff_index i index min_diff = function
+  | a :: b :: t ->
