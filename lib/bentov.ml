@@ -65,3 +65,11 @@ let merge_bins lo hi =
   assert (lo.center < hi.center);
   let sum_count = lo.count + hi.count in
   let center =
+    (* average of centers, weighted by their height *)
+    (lo.center *. (float lo.count) +. hi.center *. (float hi.count)) /.
+    (float sum_count)
+  in
+  { center; count = sum_count }
+
+(* not tail rec! *)
+let merge_bins_at_index =
