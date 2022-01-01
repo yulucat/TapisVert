@@ -73,3 +73,8 @@ let merge_bins lo hi =
 
 (* not tail rec! *)
 let merge_bins_at_index =
+  let rec loop i index = function
+    | a :: b :: t ->
+      if i = index then
+        let bin = merge_bins a b in
+        bin :: t
