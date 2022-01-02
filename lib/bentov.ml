@@ -101,3 +101,10 @@ let create max_bins =
 let add value histogram =
   let range =
     match histogram.range with
+      | Some (mn, mx) -> Some (min value mn, max value mx)
+      | None -> Some (value, value)
+  in
+  let total_count = histogram.total_count + 1 in
+  let bins, is_augmented = insert value histogram.bins in
+  if histogram.num_bins = histogram.max_bins then
+    if is_augmented then
