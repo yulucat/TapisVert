@@ -95,3 +95,9 @@ let create max_bins =
     num_bins = 0;
     bins = [];
     total_count = 0;
+    range = None
+  }
+
+let add value histogram =
+  let range =
+    match histogram.range with
