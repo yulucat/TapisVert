@@ -85,3 +85,13 @@ let merge_bins_at_index =
     | [] -> assert false
   in
   fun index bins ->
+    loop 0 index bins
+
+let create max_bins =
+  if max_bins < 2 then
+    raise (Invalid_argument (Printf.sprintf "max_bins: %d" max_bins))
+  else {
+    max_bins;
+    num_bins = 0;
+    bins = [];
+    total_count = 0;
