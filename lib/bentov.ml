@@ -78,3 +78,10 @@ let merge_bins_at_index =
       if i = index then
         let bin = merge_bins a b in
         bin :: t
+      else
+        a :: (loop (i + 1) index (b :: t))
+
+    | [ _ ]
+    | [] -> assert false
+  in
+  fun index bins ->
