@@ -115,3 +115,12 @@ let add value histogram =
     else
       { histogram with bins; range; total_count }
   else
+    if is_augmented then
+      { histogram with bins; range; total_count;
+                       num_bins = histogram.num_bins + 1; }
+    else
+      { histogram with bins; range; total_count }
+
+(* merge two sorted bin lists; not tail rec! *)
+let rec binary_merge a b =
+  match a, b with
