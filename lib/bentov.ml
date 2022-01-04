@@ -108,3 +108,10 @@ let add value histogram =
   let bins, is_augmented = insert value histogram.bins in
   if histogram.num_bins = histogram.max_bins then
     if is_augmented then
+      (* merge bins, so as to keep their number at [max_bins] *)
+      let index = min_diff_index bins in
+      let bins = merge_bins_at_index index bins in
+      { histogram with bins; range; total_count }
+    else
+      { histogram with bins; range; total_count }
+  else
