@@ -144,3 +144,10 @@ let rec k_ary_merge_half accu = function
     k_ary_merge_half  (ab :: accu) t
 
   | [a] -> (a :: accu)
+  | [] -> accu
+
+let rec k_ary_merge t =
+  match k_ary_merge_half [] t with
+    | [a] -> a
+    | t -> k_ary_merge t
+
