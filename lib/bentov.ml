@@ -124,3 +124,12 @@ let add value histogram =
 (* merge two sorted bin lists; not tail rec! *)
 let rec binary_merge a b =
   match a, b with
+    | a_h :: a_t, b_h :: b_t ->
+      if a_h.center < b_h.center then
+        a_h :: (binary_merge a_t b)
+      else if a_h.center > b_h.center then
+        b_h :: (binary_merge a b_t)
+      else
+        (* a_h.center = b_h.center: merge the two cells into one *)
+        let merged = { a_h with count = a_h.count + b_h.count } in
+        merged :: (binary_merge a_t b_t)
