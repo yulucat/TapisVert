@@ -133,3 +133,14 @@ let rec binary_merge a b =
         (* a_h.center = b_h.center: merge the two cells into one *)
         let merged = { a_h with count = a_h.count + b_h.count } in
         merged :: (binary_merge a_t b_t)
+
+    | [], _ :: _ -> b
+    | _ :: _, [] -> a
+    | [], [] -> []
+
+let rec k_ary_merge_half accu = function
+  | a :: b :: t ->
+    let ab = binary_merge a b in
+    k_ary_merge_half  (ab :: accu) t
+
+  | [a] -> (a :: accu)
