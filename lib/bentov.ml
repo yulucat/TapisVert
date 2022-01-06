@@ -151,3 +151,12 @@ let rec k_ary_merge t =
     | [a] -> a
     | t -> k_ary_merge t
 
+
+let rec reduce bins ~num_bins ~max_bins =
+  if num_bins > max_bins then
+    let index = min_diff_index bins in
+    let bins = merge_bins_at_index index bins in
+    reduce bins ~num_bins:(num_bins - 1) ~max_bins
+  else
+    bins
+
