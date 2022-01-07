@@ -160,3 +160,13 @@ let rec reduce bins ~num_bins ~max_bins =
   else
     bins
 
+
+
+let merge h_list max_bins =
+  let bins, _, total_count, range = List.fold_left
+      (fun (t_bins, t_num_bins, t_total_count, t_range)
+        { bins; num_bins; total_count; range; _} ->
+        let t_range =
+          match t_range, range with
+            | Some (t_mn, t_mx), Some (mn, mx) ->
+              Some ((min t_mn mn), (max t_mx mx))
