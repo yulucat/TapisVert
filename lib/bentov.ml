@@ -181,3 +181,19 @@ let merge h_list max_bins =
       ) ([], 0, 0, None) h_list in
 
   (* even if [num_bins <= output_max_bins], we have to apply
+     [k_ary_merge] to combine indentical bin centers *)
+  let merged_bins = k_ary_merge bins in
+  let num_bins = List.length merged_bins in
+  let bins = reduce merged_bins ~num_bins ~max_bins in
+  let num_bins = List.length bins in
+  { bins;
+    num_bins;
+    max_bins;
+    total_count;
+    range }
+
+(* add a value with a count; equivalent to calling [add value hist]
+   [count] times *)
+let addc value count hist =
+  let singleton = {
+    bins = [{ center = value ; count }];
