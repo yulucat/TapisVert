@@ -214,3 +214,10 @@ let pos_quadratic_root ~a ~b ~c =
 exception Empty
 
 let sum =
+  let rec find_i b i sum = function
+    | ({ center = p_i; count = m_i } as bin_i) ::
+        ({ center = p_i1; _ } as bin_i1) :: t ->
+      if p_i <= b && b < p_i1 then
+        bin_i, bin_i1, sum
+      else
+        find_i b (i+1) (sum +. (float m_i)) (bin_i1 :: t)
