@@ -197,3 +197,11 @@ let merge h_list max_bins =
 let addc value count hist =
   let singleton = {
     bins = [{ center = value ; count }];
+    total_count = count;
+    range = Some (value, value);
+    num_bins = 1;
+    max_bins = 1; (* benign *)
+  } in
+  merge [hist; singleton] hist.max_bins
+
+let pos_quadratic_root ~a ~b ~c =
