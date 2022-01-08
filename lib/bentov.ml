@@ -170,3 +170,14 @@ let merge h_list max_bins =
           match t_range, range with
             | Some (t_mn, t_mx), Some (mn, mx) ->
               Some ((min t_mn mn), (max t_mx mx))
+            | None, Some _ -> range
+            | Some _, None -> t_range
+            | None, None -> None
+        in
+        bins :: t_bins,
+        t_num_bins + num_bins,
+        t_total_count + total_count,
+        t_range
+      ) ([], 0, 0, None) h_list in
+
+  (* even if [num_bins <= output_max_bins], we have to apply
