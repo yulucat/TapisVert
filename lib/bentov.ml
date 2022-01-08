@@ -205,3 +205,12 @@ let addc value count hist =
   merge [hist; singleton] hist.max_bins
 
 let pos_quadratic_root ~a ~b ~c =
+  if a = 0.0 then
+    -.c /. b
+  else
+    let discriminant = b *. b -. 4. *. a *. c in
+    ((sqrt discriminant) -. b) /. (2. *. a)
+
+exception Empty
+
+let sum =
