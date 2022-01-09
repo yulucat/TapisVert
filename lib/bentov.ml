@@ -232,3 +232,12 @@ let sum =
     let m_i1 = float m_i1 in
     let bpp = (b -. p_i) /. (p_i1 -. p_i) in
     let m_b = m_i +. (m_i1 -. m_i) *. bpp in
+    let s = (m_i +. m_b) *. bpp /. 2. in
+    s +. sum_i0 +. m_i /. 2.
+
+let uniform =
+  let rec loop span cum_sum_at_centers j accu =
+    let s = (float j) *. span in
+    match cum_sum_at_centers with
+    | (cum_sum_0, {center = p_0; count = m_0}) ::
+        ((cum_sum_1, {center = p_1; count = m_1}) as bin_1) :: rest ->
