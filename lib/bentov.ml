@@ -247,3 +247,15 @@ let uniform =
         let d = s -. cum_sum_0 in
         let c = -2. *. d in
         let b = float (2 * m_0) in
+        let a = float (m_1 - m_0) in
+        let z = pos_quadratic_root ~a ~b ~c in
+        let u = p_0 +. (p_1 -. p_0) *. z in
+        loop span cum_sum_at_centers (j + 1) ((j, u) :: accu)
+      else
+        loop span (bin_1 :: rest) j accu
+    | [ _ ] -> List.rev accu
+    | [] -> assert false
+  in
+  let cum_sum_at_centers hist =
+    let bin, hist_rest, cum_sum =
+      match hist with
