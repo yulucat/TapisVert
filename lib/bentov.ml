@@ -221,3 +221,14 @@ let sum =
         bin_i, bin_i1, sum
       else
         find_i b (i+1) (sum +. (float m_i)) (bin_i1 :: t)
+
+    | _ -> raise Not_found
+  in
+
+  fun histogram b ->
+    let {center = p_i; count = m_i}, {center = p_i1; count = m_i1 }, sum_i0 =
+      find_i b 0 0.0 histogram.bins in
+    let m_i = float m_i in
+    let m_i1 = float m_i1 in
+    let bpp = (b -. p_i) /. (p_i1 -. p_i) in
+    let m_b = m_i +. (m_i1 -. m_i) *. bpp in
