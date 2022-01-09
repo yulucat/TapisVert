@@ -241,3 +241,9 @@ let uniform =
     match cum_sum_at_centers with
     | (cum_sum_0, {center = p_0; count = m_0}) ::
         ((cum_sum_1, {center = p_1; count = m_1}) as bin_1) :: rest ->
+      if s < cum_sum_0 then
+        loop span cum_sum_at_centers (j + 1) accu
+      else if cum_sum_0 <= s && s < cum_sum_1 then
+        let d = s -. cum_sum_0 in
+        let c = -2. *. d in
+        let b = float (2 * m_0) in
