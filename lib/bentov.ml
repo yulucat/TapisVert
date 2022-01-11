@@ -274,3 +274,12 @@ let uniform =
     if b < 1 then
       raise (Invalid_argument "uniform")
     else
+      let cum_sum_at_centers = cum_sum_at_centers hist.bins in
+      let span = (float hist.total_count) /. (float b) in
+      loop span cum_sum_at_centers 0 []
+
+
+let mean { bins; total_count; _ } =
+  if total_count = 0 then
+    raise Empty
+  else
