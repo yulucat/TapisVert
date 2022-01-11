@@ -259,3 +259,12 @@ let uniform =
   let cum_sum_at_centers hist =
     let bin, hist_rest, cum_sum =
       match hist with
+      | ({count; _} as bin) :: rest -> bin, rest, (float count) /. 2.
+      | _ -> raise Empty
+    in
+    let _, _, cum_sum_at_centers = List.fold_left (
+      fun (cum_sum, prev_count, cum_sum_at_centers) ({count; _} as bin) ->
+        let cum_sum = cum_sum +. (float (prev_count + count)) /. 2. in
+        let cum_sum_at_centers = (cum_sum, bin) :: cum_sum_at_centers in
+        cum_sum, count, cum_sum_at_centers
+    ) (cum_sum, bin.count, [cum_sum, bin]) hist_rest in
