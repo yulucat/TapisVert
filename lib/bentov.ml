@@ -283,3 +283,14 @@ let mean { bins; total_count; _ } =
   if total_count = 0 then
     raise Empty
   else
+    let m = List.fold_left (
+      fun sum { center; count } ->
+        sum +. center *. (float count)
+    ) 0.0 bins in
+    m /. (float total_count)
+
+let mean_stdev histogram =
+  if histogram.total_count = 0 then
+    raise Empty
+  else
+    let mean = mean histogram in
