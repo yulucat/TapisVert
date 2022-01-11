@@ -268,3 +268,9 @@ let uniform =
         let cum_sum_at_centers = (cum_sum, bin) :: cum_sum_at_centers in
         cum_sum, count, cum_sum_at_centers
     ) (cum_sum, bin.count, [cum_sum, bin]) hist_rest in
+    List.rev cum_sum_at_centers
+  in
+  fun hist b ->
+    if b < 1 then
+      raise (Invalid_argument "uniform")
+    else
