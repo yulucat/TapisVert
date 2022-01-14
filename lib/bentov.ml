@@ -294,3 +294,11 @@ let mean_stdev histogram =
     raise Empty
   else
     let mean = mean histogram in
+    let v = List.fold_left (
+        fun sum { center; count } ->
+          let diff = center -. mean in
+          sum +. diff *. diff *. (float count)
+      ) 0.0 histogram.bins
+    in
+    let stdev = sqrt (v /. (float histogram.total_count)) in
+    mean, stdev
