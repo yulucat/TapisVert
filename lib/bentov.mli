@@ -1,1 +1,2 @@
-type bi
+type bin = {
+  
