@@ -1,1 +1,1 @@
-t
+type bi
