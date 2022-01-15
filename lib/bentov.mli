@@ -1,2 +1,2 @@
 type bin = {
-  
+  center : flo
