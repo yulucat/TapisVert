@@ -1,2 +1,3 @@
 type bin = {
-  center : flo
+  center : float;
+  (
