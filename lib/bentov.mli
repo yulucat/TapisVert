@@ -1,3 +1,3 @@
 type bin = {
   center : float;
-  (** the cente
+  (** the center of th
