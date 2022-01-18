@@ -3,4 +3,4 @@ type bin = {
   (** the center of the bin *)
 
   count : int;
-  (** the nu
+  (** the number of v
