@@ -2,4 +2,5 @@ type bin = {
   center : float;
   (** the center of the bin *)
 
-  count : in
+  count : int;
+ 
