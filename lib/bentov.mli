@@ -5,3 +5,4 @@ type bin = {
   count : int;
   (** the number of values in the bin *)
 }
+(** [bin
