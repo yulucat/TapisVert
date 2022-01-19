@@ -3,4 +3,5 @@ type bin = {
   (** the center of the bin *)
 
   count : int;
-  (** the number of values in the b
+  (** the number of values in the bin *)
+}
