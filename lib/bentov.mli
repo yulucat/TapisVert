@@ -5,4 +5,4 @@ type bin = {
   count : int;
   (** the number of values in the bin *)
 }
-(** [bin] represents o
+(** [bin] represents one of the bi
