@@ -6,4 +6,4 @@ type bin = {
   (** the number of values in the bin *)
 }
 (** [bin] represents one of the bins in a 1D histogram. The bin is
-    centered in [center] and its mass i
+    centered in [center] and its mass is [count], ha
