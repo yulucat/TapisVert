@@ -9,4 +9,4 @@ type bin = {
     centered in [center] and its mass is [count], half of which is on
     either side of [center]. *)
 
-type
+type histogra
