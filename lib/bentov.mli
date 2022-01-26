@@ -11,4 +11,4 @@ type bin = {
 
 type histogram
 
-val bins : histogram 
+val bins : histogram -> bin li
