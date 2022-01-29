@@ -12,4 +12,4 @@ type bin = {
 type histogram
 
 val bins : histogram -> bin list
-(** [bins h] returns the list of bins, sorted
+(** [bins h] returns the list of bins, sorted by the bi
