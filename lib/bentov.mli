@@ -13,4 +13,6 @@ type histogram
 
 val bins : histogram -> bin list
 (** [bins h] returns the list of bins, sorted by the bin center,
-    comprising histogram [h] 
+    comprising histogram [h] *)
+
+val n
