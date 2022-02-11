@@ -15,4 +15,5 @@ val bins : histogram -> bin list
 (** [bins h] returns the list of bins, sorted by the bin center,
     comprising histogram [h] *)
 
-val num_bins : histogram
+val num_bins : histogram -> int
+(*
