@@ -16,4 +16,4 @@ val bins : histogram -> bin list
     comprising histogram [h] *)
 
 val num_bins : histogram -> int
-(** [num_bins h] returns t
+(** [num_bins h] returns the size o
