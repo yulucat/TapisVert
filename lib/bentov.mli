@@ -19,3 +19,4 @@ val num_bins : histogram -> int
 (** [num_bins h] returns the size of the histogram [h] in terms of the
     number of bins; equivalent to [List.length (bins h)] *)
 
+val max_bins
