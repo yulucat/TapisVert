@@ -20,3 +20,4 @@ val num_bins : histogram -> int
     number of bins; equivalent to [List.length (bins h)] *)
 
 val max_bins : histogram -> int
+(** [ma
