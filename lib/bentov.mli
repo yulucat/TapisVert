@@ -21,4 +21,5 @@ val num_bins : histogram -> int
 
 val max_bins : histogram -> int
 (** [max_bins h] returns the maximum number of bins of this histogram;
-    when the number of unique values added to the histogram excee
+    when the number of unique values added to the histogram exceeds
+    this 
