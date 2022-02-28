@@ -24,4 +24,4 @@ val max_bins : histogram -> int
     when the number of unique values added to the histogram exceeds
     this [max_bins h], [h] becomes an approximation. *)
 
-val total_count :
+val total_count : histogra
