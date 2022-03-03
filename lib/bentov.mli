@@ -25,4 +25,4 @@ val max_bins : histogram -> int
     this [max_bins h], [h] becomes an approximation. *)
 
 val total_count : histogram -> int
-(** [total_count h] returns the number of v
+(** [total_count h] returns the number of values a
