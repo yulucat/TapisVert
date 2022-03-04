@@ -27,4 +27,4 @@ val max_bins : histogram -> int
 val total_count : histogram -> int
 (** [total_count h] returns the number of values added to histogram [h] *)
 
-val range : histogr
+val range : histogram -
