@@ -28,4 +28,5 @@ val total_count : histogram -> int
 (** [total_count h] returns the number of values added to histogram [h] *)
 
 val range : histogram -> (float * float) option
-(** [range h] returns the minimum and maximum values se
+(** [range h] returns the minimum and maximum values seen in the
+   
