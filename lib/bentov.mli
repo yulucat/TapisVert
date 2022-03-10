@@ -29,4 +29,4 @@ val total_count : histogram -> int
 
 val range : histogram -> (float * float) option
 (** [range h] returns the minimum and maximum values seen in the
-    construction of histog
+    construction of histogram h, o
