@@ -32,4 +32,4 @@ val range : histogram -> (float * float) option
     construction of histogram h, or [None] if no values have yet been
     added *)
 
-val creat
+val create : i
