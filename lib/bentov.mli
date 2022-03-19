@@ -35,4 +35,4 @@ val range : histogram -> (float * float) option
 val create : int -> histogram
 (** [create max_bins] creates a histogram with up to [max_bins] bins *)
 
-val add 
+val add : floa
