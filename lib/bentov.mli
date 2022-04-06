@@ -36,4 +36,4 @@ val create : int -> histogram
 (** [create max_bins] creates a histogram with up to [max_bins] bins *)
 
 val add : float -> histogram -> histogram
-(** [add v h] adds a value to [v] to histogram 
+(** [add v h] adds a value to [v] to histogram [h], returnin
