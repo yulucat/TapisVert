@@ -37,4 +37,5 @@ val create : int -> histogram
 
 val add : float -> histogram -> histogram
 (** [add v h] adds a value to [v] to histogram [h], returning the
-    updated h
+    updated histogram *)
+
