@@ -39,4 +39,4 @@ val add : float -> histogram -> histogram
 (** [add v h] adds a value to [v] to histogram [h], returning the
     updated histogram *)
 
-val addc : float -> int
+val addc : float -> int -> histo
