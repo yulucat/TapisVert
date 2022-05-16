@@ -40,4 +40,4 @@ val add : float -> histogram -> histogram
     updated histogram *)
 
 val addc : float -> int -> histogram -> histogram
-(** [addc v c h] adds a value to [v] to histogram [h
+(** [addc v c h] adds a value to [v] to histogram [h] with cou
