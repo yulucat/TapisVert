@@ -41,4 +41,4 @@ val add : float -> histogram -> histogram
 
 val addc : float -> int -> histogram -> histogram
 (** [addc v c h] adds a value to [v] to histogram [h] with count [c],
-    returning the updated histogram.  It is equivalen
+    returning the updated histogram.  It is equivalent to 
