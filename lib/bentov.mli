@@ -44,4 +44,4 @@ val addc : float -> int -> histogram -> histogram
     returning the updated histogram.  It is equivalent to calling [add
     v h] [c] times. *)
 
-val merge : hist
+val merge : histogram lis
