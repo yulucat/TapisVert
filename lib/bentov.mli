@@ -45,4 +45,4 @@ val addc : float -> int -> histogram -> histogram
     v h] [c] times. *)
 
 val merge : histogram list -> int -> histogram
-(** [merge h_list
+(** [merge h_list max_bins
