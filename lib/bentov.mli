@@ -48,4 +48,4 @@ val merge : histogram list -> int -> histogram
 (** [merge h_list max_bins] creates a new histogram from the histograms
     in [h_list], whose size is no bigger than [max_bins] *)
 
-val sum : histogram -
+val sum : histogram -> float -> f
