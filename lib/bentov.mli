@@ -49,4 +49,4 @@ val merge : histogram list -> int -> histogram
     in [h_list], whose size is no bigger than [max_bins] *)
 
 val sum : histogram -> float -> float
-(** [sum hist b] r
+(** [sum hist b] returns 
