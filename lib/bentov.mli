@@ -49,4 +49,5 @@ val merge : histogram list -> int -> histogram
     in [h_list], whose size is no bigger than [max_bins] *)
 
 val sum : histogram -> float -> float
-(** [sum hist b] returns an estimate of the number of points in 
+(** [sum hist b] returns an estimate of the number of points in the
+    in
