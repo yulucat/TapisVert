@@ -50,4 +50,4 @@ val merge : histogram list -> int -> histogram
 
 val sum : histogram -> float -> float
 (** [sum hist b] returns an estimate of the number of points in the
-    interval [[−infinity,b]
+    interval [[−infinity,b]]. For an
