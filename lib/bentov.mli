@@ -54,4 +54,6 @@ val sum : histogram -> float -> float
     be strictly between the left and right bin centers. Otherwise,
     [Not_found] is raised. *)
 
-exception
+exception Empty
+
+v
