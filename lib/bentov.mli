@@ -56,4 +56,4 @@ val sum : histogram -> float -> float
 
 exception Empty
 
-val uni
+val uniform : 
