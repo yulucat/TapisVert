@@ -56,4 +56,4 @@ val sum : histogram -> float -> float
 
 exception Empty
 
-val uniform : histogram -> int -> (int * 
+val uniform : histogram -> int -> (int * float) l
