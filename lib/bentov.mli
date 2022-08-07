@@ -57,4 +57,4 @@ val sum : histogram -> float -> float
 exception Empty
 
 val uniform : histogram -> int -> (int * float) list
-(** 
+(** [uniform h
