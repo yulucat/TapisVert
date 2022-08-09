@@ -57,4 +57,4 @@ val sum : histogram -> float -> float
 exception Empty
 
 val uniform : histogram -> int -> (int * float) list
-(** [uniform hist num_intervals] retur
+(** [uniform hist num_intervals] returns estimat
