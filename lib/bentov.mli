@@ -59,4 +59,4 @@ exception Empty
 val uniform : histogram -> int -> (int * float) list
 (** [uniform hist num_intervals] returns estimates of the quantiles of
     the distribution represented by histogram [hist]. The quantiles are
-    associated with th
+    associated with the bound
