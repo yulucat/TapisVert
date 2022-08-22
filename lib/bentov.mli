@@ -60,4 +60,5 @@ val uniform : histogram -> int -> (int * float) list
 (** [uniform hist num_intervals] returns estimates of the quantiles of
     the distribution represented by histogram [hist]. The quantiles are
     associated with the boundaries of [num_interval] intervals, in
-    ascending order. For example, [uniform hist 4] returns an estimat
+    ascending order. For example, [uniform hist 4] returns an estimate
+    of
