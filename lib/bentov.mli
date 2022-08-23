@@ -62,4 +62,4 @@ val uniform : histogram -> int -> (int * float) list
     associated with the boundaries of [num_interval] intervals, in
     ascending order. For example, [uniform hist 4] returns an estimate
     of the interquartile range, consisting of the 25-th percentile,
-    50-th percentile (m
+    50-th percentile (median) and
