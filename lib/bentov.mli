@@ -64,4 +64,4 @@ val uniform : histogram -> int -> (int * float) list
     of the interquartile range, consisting of the 25-th percentile,
     50-th percentile (median) and 75-th percentile. (The minimum and
     maximum of the histogram are seperately available through the
-    function [ran
+    function [range]. [u
