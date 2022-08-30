@@ -65,4 +65,4 @@ val uniform : histogram -> int -> (int * float) list
     50-th percentile (median) and 75-th percentile. (The minimum and
     maximum of the histogram are seperately available through the
     function [range]. [uniform] can return fewer than the desired
-    quantiles
+    quantiles in histograms t
