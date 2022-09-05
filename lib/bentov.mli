@@ -66,4 +66,4 @@ val uniform : histogram -> int -> (int * float) list
     maximum of the histogram are seperately available through the
     function [range]. [uniform] can return fewer than the desired
     quantiles in histograms that have extremely dense regions. Raises
-    [Empty] if 
+    [Empty] if the histo
