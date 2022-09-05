@@ -68,4 +68,4 @@ val uniform : histogram -> int -> (int * float) list
     quantiles in histograms that have extremely dense regions. Raises
     [Empty] if the histogram has not been [add]'d any data.*)
 
-val mean : 
+val mean : histogram 
