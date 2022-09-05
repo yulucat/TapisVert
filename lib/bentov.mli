@@ -67,3 +67,5 @@ val uniform : histogram -> int -> (int * float) list
     function [range]. [uniform] can return fewer than the desired
     quantiles in histograms that have extremely dense regions. Raises
     [Empty] if the histogram has not been [add]'d any data.*)
+
+val mean : 
