@@ -69,4 +69,4 @@ val uniform : histogram -> int -> (int * float) list
     [Empty] if the histogram has not been [add]'d any data.*)
 
 val mean : histogram -> float
-(** [mean hist] 
+(** [mean hist] returns a
