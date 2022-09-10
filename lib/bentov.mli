@@ -70,4 +70,4 @@ val uniform : histogram -> int -> (int * float) list
 
 val mean : histogram -> float
 (** [mean hist] returns an estimate of the mean of the distribution
-    represented by [hist]. Rai
+    represented by [hist]. Raises [Empt
