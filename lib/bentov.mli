@@ -73,4 +73,4 @@ val mean : histogram -> float
     represented by [hist]. Raises [Empty] if the histogram has not been
     [add]'d any data. *)
 
-val mea
+val mean_stdev 
