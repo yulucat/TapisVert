@@ -71,4 +71,4 @@ val uniform : histogram -> int -> (int * float) list
 val mean : histogram -> float
 (** [mean hist] returns an estimate of the mean of the distribution
     represented by [hist]. Raises [Empty] if the histogram has not been
-    [a
+    [add]'d any data. *
