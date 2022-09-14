@@ -74,4 +74,4 @@ val mean : histogram -> float
     [add]'d any data. *)
 
 val mean_stdev : histogram -> float * float
-(** [m
+(** [mean_stdev his
