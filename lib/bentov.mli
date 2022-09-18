@@ -74,4 +74,5 @@ val mean : histogram -> float
     [add]'d any data. *)
 
 val mean_stdev : histogram -> float * float
-(** [mean_stdev hist] returns estimates of the mean and standa
+(** [mean_stdev hist] returns estimates of the mean and standard
+    devi
