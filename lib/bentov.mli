@@ -76,4 +76,4 @@ val mean : histogram -> float
 val mean_stdev : histogram -> float * float
 (** [mean_stdev hist] returns estimates of the mean and standard
     deviation of the distribution represented bh [hist]. Raises
-    [Empty] if the hist
+    [Empty] if the histogram has
