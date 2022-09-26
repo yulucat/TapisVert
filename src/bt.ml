@@ -15,3 +15,11 @@ let print_histogram h =
   let count_f = float count in
   List.iter (
     fun bin ->
+      let frequency = (float bin.count) /. count_f in
+      pr "%.8f %8d %.3e\n"  bin.center bin.count frequency
+  ) (bins h);
+  pr "\n"
+
+let rec fold_lines f ch x0 =
+  let x, is_done =
+    try
