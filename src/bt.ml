@@ -60,3 +60,15 @@ let print_uniform hist num_intervals =
       pr "%d/%d[=%.3f] %+.5e\n" rank num_intervals
         ((float rank)/.(float num_intervals)) quantile
   ) u
+
+
+let print_mean_stdev hist =
+  let m, sd = mean_stdev hist in
+  pr "mean=%+.5e\nstdev=%+.5e\n" m sd
+
+
+let main max_bins path_opt p_histogram p_mean_stdev p_uniform =
+  let hist = histogram_of_file path_opt max_bins in
+  if p_mean_stdev then (
+    print_mean_stdev hist;
+    pr "\n"
