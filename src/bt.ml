@@ -23,3 +23,10 @@ let print_histogram h =
 let rec fold_lines f ch x0 =
   let x, is_done =
     try
+      let line = input_line ch in
+      let x = f x0 line in
+      x, false
+    with End_of_file ->
+      x0, true
+  in
+  if is_done then
