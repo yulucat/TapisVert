@@ -33,3 +33,13 @@ let rec fold_lines f ch x0 =
     x
   else
     fold_lines f ch x
+
+
+let histogram_of_file path_opt max_bins =
+  let ch =
+    match path_opt with
+      | Some path -> open_in path
+      | None -> stdin
+  in
+
+  let hist = fold_lines (
