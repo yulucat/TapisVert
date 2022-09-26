@@ -30,3 +30,6 @@ let rec fold_lines f ch x0 =
       x0, true
   in
   if is_done then
+    x
+  else
+    fold_lines f ch x
