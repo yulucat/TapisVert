@@ -43,3 +43,20 @@ let histogram_of_file path_opt max_bins =
   in
 
   let hist = fold_lines (
+    fun hist line ->
+      let value = float_of_string line in
+      add value hist
+  ) ch (create max_bins) in
+
+  close_in ch;
+
+  hist
+
+let print_uniform hist num_intervals =
+  let u = uniform hist num_intervals in
+  pr "uniform with %d intervals:\n%!" num_intervals;
+  List.iter (
+    fun  (rank, quantile) ->
+      pr "%d/%d[=%.3f] %+.5e\n" rank num_intervals
+        ((float rank)/.(float num_intervals)) quantile
+  ) u
