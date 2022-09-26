@@ -72,3 +72,9 @@ let main max_bins path_opt p_histogram p_mean_stdev p_uniform =
   if p_mean_stdev then (
     print_mean_stdev hist;
     pr "\n"
+  );
+
+  if p_histogram then (
+    print_histogram hist;
+    pr "\n"
+  );
