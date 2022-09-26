@@ -11,3 +11,7 @@ let print_histogram h =
   (match (range h) with
     | Some (mn, mx) -> pr "min=%+.5e\nmax=%+.5e\n" mn mx
     | None -> ()
+  );
+  let count_f = float count in
+  List.iter (
+    fun bin ->
