@@ -96,3 +96,14 @@ let _ =
                \"A Streaming Parallel Decision Tree Algorithm\" by Yael \
                Ben-Haim and Elad Tom-Tov. \
                http://jmlr.org/papers/volume11/ben-haim10a/ben-haim10a.pdf" in
+
+    let max_bins =
+      let doc = "approximate the histogram with this maximum number of bins" in
+      Arg.(required & opt (some int) (Some 20) &
+           info ["n"; "max-bins"] ~docv:"INT" ~doc)
+    in
+
+    let path =
+      let doc = "path of input file (absent: stdin)" in
+      Arg.(value & opt (some string) None &
+           info ["i"; "input"] ~docv:"PATH" ~doc)
