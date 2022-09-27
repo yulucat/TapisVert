@@ -78,3 +78,11 @@ let main max_bins path_opt p_histogram p_mean_stdev p_uniform =
     print_histogram hist;
     pr "\n"
   );
+
+  match p_uniform with
+    | Some intervals ->
+      print_uniform hist intervals;
+      pr "\n"
+    | None -> ()
+
+open Cmdliner
