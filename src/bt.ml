@@ -86,3 +86,13 @@ let main max_bins path_opt p_histogram p_mean_stdev p_uniform =
     | None -> ()
 
 open Cmdliner
+
+let _ =
+  let command =
+    let doc = "read a column of numbers from an input file (or stdin), and \
+               update an approximate histogram of these numbers.  Every so \
+               often, print out the centers of the histogram bins, along with \
+               their probability mass.  Based on the algorithm described in \
+               \"A Streaming Parallel Decision Tree Algorithm\" by Yael \
+               Ben-Haim and Elad Tom-Tov. \
+               http://jmlr.org/papers/volume11/ben-haim10a/ben-haim10a.pdf" in
