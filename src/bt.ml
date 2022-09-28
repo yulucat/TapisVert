@@ -107,3 +107,15 @@ let _ =
       let doc = "path of input file (absent: stdin)" in
       Arg.(value & opt (some string) None &
            info ["i"; "input"] ~docv:"PATH" ~doc)
+    in
+
+    let print_mean_stdev =
+      let doc = "use the histogram to compute and print the mean and \
+                 standard deviation" in
+      Arg.(value & flag & info ["s"; "stats"] ~doc)
+    in
+
+    let print_histogram =
+      let doc = "print details of the histogram, including its bins" in
+      Arg.(value & flag & info ["b"; "bins"] ~doc)
+    in
