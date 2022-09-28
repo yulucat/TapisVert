@@ -119,3 +119,9 @@ let _ =
       let doc = "print details of the histogram, including its bins" in
       Arg.(value & flag & info ["b"; "bins"] ~doc)
     in
+
+    let print_uniform =
+      let doc = "compute and print the value deliniating the interval which
+                 are equally spaced in terms of probability mass." in
+      Arg.(value & opt (some int) None & info ["u"; "uniform"] ~docv:"INT" ~doc)
+    in
