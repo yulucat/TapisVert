@@ -125,3 +125,9 @@ let _ =
                  are equally spaced in terms of probability mass." in
       Arg.(value & opt (some int) None & info ["u"; "uniform"] ~docv:"INT" ~doc)
     in
+
+    Cmd.v (Cmd.info "bt" ~doc)
+    Term.(const main
+          $ max_bins
+          $ path
+          $ print_histogram
