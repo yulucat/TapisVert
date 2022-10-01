@@ -131,3 +131,8 @@ let _ =
           $ max_bins
           $ path
           $ print_histogram
+          $ print_mean_stdev
+          $ print_uniform
+         )
+  in
+  Cmd.eval ~catch:false command
