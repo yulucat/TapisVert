@@ -1,4 +1,5 @@
 (executable
  (name bt)
  (public_name bt)
- (libraries cmdliner ben
+ (libraries cmdliner bentov)
+)
