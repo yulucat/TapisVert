@@ -1,4 +1,4 @@
 (executable
  (name bt)
  (public_name bt)
- (librarie
+ (libraries cmdliner ben
