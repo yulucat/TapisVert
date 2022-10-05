@@ -1,1 +1,1 @@
-(test (name test) (lib
+(test (name test) (libraries bentov
