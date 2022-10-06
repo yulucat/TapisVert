@@ -1,3 +1,3 @@
 open Seq
 
-(** Knuth algorithm fo
+(** Knuth algorithm for producing a
