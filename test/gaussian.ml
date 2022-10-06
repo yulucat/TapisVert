@@ -1,3 +1,3 @@
 open Seq
 
-(** Knuth alg
+(** Knuth algorithm fo
