@@ -1,3 +1,3 @@
 open Seq
 
-(** Knut
+(** Knuth alg
