@@ -1,3 +1,3 @@
 open Seq
 
-(** Knuth algorithm for producing a
+(** Knuth algorithm for producing a sampl
