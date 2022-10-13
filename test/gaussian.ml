@@ -6,4 +6,5 @@ let random_normal : float Seq.t =
     let u1 = Random.float 1.0 in
     let u2 = Random.float 1.0 in
     let v1 = 2. *. u1 -. 1.0 in
-    let v2 = 2. *. u2 -. 1.0
+    let v2 = 2. *. u2 -. 1.0 in
+    l
