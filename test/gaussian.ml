@@ -4,4 +4,4 @@ open Seq
 let random_normal : float Seq.t =
   let rec gen phase () =
     let u1 = Random.float 1.0 in
-    let u2 =
+    let u2 = Random.f
