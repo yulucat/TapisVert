@@ -5,4 +5,5 @@ let random_normal : float Seq.t =
   let rec gen phase () =
     let u1 = Random.float 1.0 in
     let u2 = Random.float 1.0 in
-    let v1 = 2. *. u1 -
+    let v1 = 2. *. u1 -. 1.0 in
+   
