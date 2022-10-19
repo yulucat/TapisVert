@@ -8,4 +8,4 @@ let random_normal : float Seq.t =
     let v1 = 2. *. u1 -. 1.0 in
     let v2 = 2. *. u2 -. 1.0 in
     let s = v1 *. v1 +. v2 *. v2 in
-    if s >= 1
+    if s >= 1.0 || s = 0.0 
