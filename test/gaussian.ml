@@ -9,4 +9,5 @@ let random_normal : float Seq.t =
     let v2 = 2. *. u2 -. 1.0 in
     let s = v1 *. v1 +. v2 *. v2 in
     if s >= 1.0 || s = 0.0 then
-      gen phas
+      gen phase ()
+  
