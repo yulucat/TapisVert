@@ -11,3 +11,4 @@ let random_normal : float Seq.t =
     if s >= 1.0 || s = 0.0 then
       gen phase ()
     else
+      l
