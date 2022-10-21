@@ -11,4 +11,4 @@ let random_normal : float Seq.t =
     if s >= 1.0 || s = 0.0 then
       gen phase ()
     else
-      let v = if phase then v1 else v
+      let v = if phase then v1 else v2 in
