@@ -12,4 +12,4 @@ let random_normal : float Seq.t =
       gen phase ()
     else
       let v = if phase then v1 else v2 in
-      let x = v *. sqrt ((-2. *. log s) /
+      let x = v *. sqrt ((-2. *. log s) /. s) in
