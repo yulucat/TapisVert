@@ -16,3 +16,5 @@ let random_normal : float Seq.t =
       Cons (x, gen (not phase))
   in
   gen true
+
+(* [ran
