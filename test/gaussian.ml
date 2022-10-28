@@ -17,4 +17,4 @@ let random_normal : float Seq.t =
   in
   gen true
 
-(* [random_normal ~mu ~si
+(* [random_normal ~mu ~sigma] pro
