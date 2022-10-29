@@ -17,4 +17,5 @@ let random_normal : float Seq.t =
   in
   gen true
 
-(* [random_normal ~mu ~sigma] produces a sequence whose
+(* [random_normal ~mu ~sigma] produces a sequence whose elements
+   
