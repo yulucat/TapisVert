@@ -18,4 +18,5 @@ let random_normal : float Seq.t =
   gen true
 
 (* [random_normal ~mu ~sigma] produces a sequence whose elements
-   are N([mean],[stdde
+   are N([mean],[stddev]) *)
+let s
