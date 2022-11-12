@@ -20,4 +20,4 @@ let random_normal : float Seq.t =
 (* [random_normal ~mu ~sigma] produces a sequence whose elements
    are N([mean],[stddev]) *)
 let seq ~mu ~sigma =
-  if mu = 0. && s
+  if mu = 0. && sigma = 1
