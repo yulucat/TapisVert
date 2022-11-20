@@ -22,4 +22,5 @@ let random_normal : float Seq.t =
 let seq ~mu ~sigma =
   if mu = 0. && sigma = 1.0 then
     random_normal
-  el
+  else
+    Seq.ma
