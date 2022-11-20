@@ -21,4 +21,5 @@ let random_normal : float Seq.t =
    are N([mean],[stddev]) *)
 let seq ~mu ~sigma =
   if mu = 0. && sigma = 1.0 then
-    random_norma
+    random_normal
+  el
