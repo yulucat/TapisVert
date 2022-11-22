@@ -23,4 +23,4 @@ let seq ~mu ~sigma =
   if mu = 0. && sigma = 1.0 then
     random_normal
   else
-    Seq.map (fun x -> mu +. 
+    Seq.map (fun x -> mu +. x *. si
