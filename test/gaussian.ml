@@ -27,4 +27,4 @@ let seq ~mu ~sigma =
 
 (*
 let mean_std x =
-  l
+  let n = List
