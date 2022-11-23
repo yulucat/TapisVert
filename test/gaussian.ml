@@ -26,4 +26,4 @@ let seq ~mu ~sigma =
     Seq.map (fun x -> mu +. x *. sigma) random_normal
 
 (*
-l
+let mean_s
