@@ -29,4 +29,4 @@ let seq ~mu ~sigma =
 let mean_std x =
   let n = List.length x in
   let sum = List.fold_left ( +. ) 0. x in
-  let me
+  let mean = sum /. (
