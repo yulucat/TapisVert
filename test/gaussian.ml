@@ -30,4 +30,4 @@ let mean_std x =
   let n = List.length x in
   let sum = List.fold_left ( +. ) 0. x in
   let mean = sum /. (float n) in
-  let rss = List.fold_left
+  let rss = List.fold_left (fun rss x
