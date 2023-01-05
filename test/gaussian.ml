@@ -32,4 +32,7 @@ let mean_std x =
   let mean = sum /. (float n) in
   let rss = List.fold_left (fun rss x -> rss +. (x -. mean)**2.) 0. x in
   let std = sqrt (rss /. (float (n-1))) in
-  mean, 
+  mean, std
+
+
+let 
