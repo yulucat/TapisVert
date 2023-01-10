@@ -36,4 +36,4 @@ let mean_std x =
 
 
 let _ =
-  let 
+  let x = ta
