@@ -36,4 +36,4 @@ let mean_std x =
 
 
 let _ =
-  let x = ta
+  let x = take_rev 100_0
