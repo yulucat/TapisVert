@@ -37,4 +37,4 @@ let mean_std x =
 
 let _ =
   let x = take_rev 100_000 (seq ~mu:0. ~stddev:1.) in
-  let qs = quantiles x
+  let qs = quantiles x 10 in
