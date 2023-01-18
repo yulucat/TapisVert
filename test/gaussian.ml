@@ -38,4 +38,4 @@ let mean_std x =
 let _ =
   let x = take_rev 100_000 (seq ~mu:0. ~stddev:1.) in
   let qs = quantiles x 10 in
-  List.iter (fun (i, q) -> Printf.printf "%d 
+  List.iter (fun (i, q) -> Printf.printf "%d %f\n" i q)
