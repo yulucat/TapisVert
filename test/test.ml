@@ -10,3 +10,9 @@
    then merge these two histograms using [Bentov.merge]. We call the
    result of merging the two sub-histograms [merged]. Finally, we
    compute and print the mean-square-error between the true quantiles
+   and [mixed], and the true quantiles and [merged]. *)
+
+(* [quantiles list num_intervals] returns the quantiles (true, not
+   approximated) of list [list] at [num_intervals + 1] points, including
+   the minimum and maximum values (which are the first and last values of
+   the result, resp. *)
