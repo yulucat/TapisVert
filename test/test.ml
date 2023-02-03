@@ -16,3 +16,16 @@
    approximated) of list [list] at [num_intervals + 1] points, including
    the minimum and maximum values (which are the first and last values of
    the result, resp. *)
+let quantiles =
+  let rec loop i j span accu = function
+    | x0 :: x1 :: rest ->
+      let s = (float j) *. span in
+      if i <= s && s < i +. 1. then
+        let d = s -. i in
+        let x_d = (x1 -. x0) *. d +. x0 in
+        loop i (j + 1) span ((j, x_d) :: accu) (x0 :: x1 :: rest)
+      else
+        loop (i +. 1.) j span accu (x1 :: rest)
+
+    | [x] ->
+      let x_d = j, x in
