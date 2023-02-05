@@ -29,3 +29,13 @@ let quantiles =
 
     | [x] ->
       let x_d = j, x in
+      List.rev (x_d :: accu)
+
+    | [] -> assert false
+  in
+  fun x m ->
+    let x_sorted = List.sort Stdlib.compare x in
+    let n = List.length x_sorted in
+    let span = (float n) /. (float m) in
+    loop 0. 0 span [] x_sorted
+
