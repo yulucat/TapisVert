@@ -39,3 +39,14 @@ let quantiles =
     let span = (float n) /. (float m) in
     loop 0. 0 span [] x_sorted
 
+
+open Seq
+
+(** [up_to n seq] returns a sequence that echos at most [n] values of
+    sequence [seq] *)
+let up_to =
+  let rec loop i n seq () =
+    if i = n then
+      Nil
+    else
+      match seq () with
