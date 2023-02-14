@@ -50,3 +50,14 @@ let up_to =
       Nil
     else
       match seq () with
+      | Nil -> Nil
+      | Cons (v, seq) ->
+        Cons (v, loop (i + 1) n seq)
+  in
+  fun n seq ->
+    if n < 0 then
+      raise (Invalid_argument "up_to")
+    else
+      loop 0 n seq
+
+module IntMap = Map.Make(Int)
