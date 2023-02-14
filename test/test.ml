@@ -61,3 +61,12 @@ let up_to =
       loop 0 n seq
 
 module IntMap = Map.Make(Int)
+
+let map_of_assoc assoc =
+  List.fold_left (
+    fun k_to_v (k, v) ->
+      IntMap.add k v k_to_v
+  ) IntMap.empty assoc
+
+let _ =
+  (* the number of data to draw *)
