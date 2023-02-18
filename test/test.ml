@@ -70,3 +70,10 @@ let map_of_assoc assoc =
 
 let _ =
   (* the number of data to draw *)
+  let n = 100_000 in
+
+  (* the size of the approximate histograms *)
+  let q = 20 in
+
+  let rec gaussian_mixture normal_a normal_b () =
+    if Random.bool () then
