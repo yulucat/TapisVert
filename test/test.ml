@@ -77,3 +77,15 @@ let _ =
 
   let rec gaussian_mixture normal_a normal_b () =
     if Random.bool () then
+      match normal_a () with
+      | Cons (x, normal_a) ->
+        Cons ((`A, x), gaussian_mixture normal_a normal_b)
+      | Nil -> Nil
+    else
+      match normal_b () with
+      | Cons (x, normal_b) ->
+        Cons ((`B, x), gaussian_mixture normal_a normal_b)
+      | Nil -> Nil
+  in
+
+  let n1 = Gaussian.seq ~mu:2.0 ~sigma:1.0 in (* N(2,1) *)
