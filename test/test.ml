@@ -108,3 +108,11 @@ let _ =
         let mixed_h = Bentov.add x mixed_h in
         normal_a_h, normal_b_h, mixed_h, x :: data
   ) (
+    let normal_a_h = create q in
+    let normal_b_h = create q in
+    let mixed_h = create q in
+    normal_a_h, normal_b_h, mixed_h, []
+  ) gmm in
+
+  (* merge the two sub-histograms *)
+  let merged_h = merge [normal_a_h; normal_b_h] q in
