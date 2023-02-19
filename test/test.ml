@@ -97,3 +97,14 @@ let _ =
 
   let normal_a_h, normal_b_h, mixed_h, data = Seq.fold_left (
     fun (normal_a_h, normal_b_h, mixed_h, data) draw ->
+      match draw with
+      | `A, x ->
+        let normal_a_h = Bentov.add x normal_a_h in
+        let mixed_h = Bentov.add x mixed_h in
+        normal_a_h, normal_b_h, mixed_h, x :: data
+
+      | `B, x ->
+        let normal_b_h = Bentov.add x normal_b_h in
+        let mixed_h = Bentov.add x mixed_h in
+        normal_a_h, normal_b_h, mixed_h, x :: data
+  ) (
