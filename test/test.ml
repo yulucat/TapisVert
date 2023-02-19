@@ -89,3 +89,11 @@ let _ =
   in
 
   let n1 = Gaussian.seq ~mu:2.0 ~sigma:1.0 in (* N(2,1) *)
+  let n2 = Gaussian.seq ~mu:5.0 ~sigma:1.0 in (* N(5,1) *)
+
+  let gmm = up_to n (gaussian_mixture n1 n2) in
+
+  let open Bentov in
+
+  let normal_a_h, normal_b_h, mixed_h, data = Seq.fold_left (
+    fun (normal_a_h, normal_b_h, mixed_h, data) draw ->
