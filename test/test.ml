@@ -133,3 +133,17 @@ let _ =
        | None -> None
       ),
       (match IntMap.find_opt i merged with
+       | Some merged -> Some (actual -. merged)
+       | None -> None
+      )
+  in
+
+  (* compute sum of squared-errors *)
+  let rec stats i actual mixed merged mixed_stats merged_stats =
+    if i < num_intervals then
+      let mixed_err, merged_err = error i actual mixed merged in
+      let mixed_stats =
+        match mixed_err with
+        | Some err ->
+          let sum_se_mixed, n_mixed = mixed_stats in
+          sum_se_mixed +. err *. err, n_mixed + 1
