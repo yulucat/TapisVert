@@ -116,3 +116,15 @@ let _ =
 
   (* merge the two sub-histograms *)
   let merged_h = merge [normal_a_h; normal_b_h] q in
+
+  assert (total_count mixed_h = n );
+  assert (total_count merged_h = n );
+
+  (* measure the error between the true quantiles and approximations
+     on a grid half the size of our approximate histograms *)
+  let num_intervals = q/2 in
+
+  let error i actual mixed merged =
+    match IntMap.find_opt i actual with
+    | None -> None, None
+    | Some actual ->
