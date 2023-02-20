@@ -128,3 +128,8 @@ let _ =
     match IntMap.find_opt i actual with
     | None -> None, None
     | Some actual ->
+      (match IntMap.find_opt i mixed with
+       | Some mixed -> Some (actual -. mixed)
+       | None -> None
+      ),
+      (match IntMap.find_opt i merged with
