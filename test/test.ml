@@ -169,3 +169,7 @@ let _ =
     stats 0 actual_q mixed_q merged_q (0., 0) (0., 0) in
 
   let err_mixed = sqrt ((sum_se_mixed) /. (float n_mixed)) in
+  let err_merged = sqrt ((sum_se_merged) /. (float n_merged)) in
+  Printf.printf "err_mixed=%e (n=%d)\nerr_merged=%e (n=%d)\n"
+    err_mixed n_mixed err_merged n_merged;
+  assert (err_mixed <= 5e-2 && err_merged <= 5e-2)
