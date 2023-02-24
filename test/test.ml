@@ -147,3 +147,12 @@ let _ =
         | Some err ->
           let sum_se_mixed, n_mixed = mixed_stats in
           sum_se_mixed +. err *. err, n_mixed + 1
+        | None -> mixed_stats
+      in
+      let merged_stats =
+        match merged_err with
+        | Some err ->
+          let sum_se_merged, n_merged = merged_stats in
+          sum_se_merged +. err *. err, n_merged + 1
+        | None -> merged_stats
+      in
