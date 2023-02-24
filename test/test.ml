@@ -156,3 +156,16 @@ let _ =
           sum_se_merged +. err *. err, n_merged + 1
         | None -> merged_stats
       in
+      stats (i+1) actual mixed merged mixed_stats merged_stats
+    else
+      mixed_stats, merged_stats
+  in
+
+  let mixed_q  = map_of_assoc (uniform mixed_h num_intervals) in
+  let merged_q = map_of_assoc (uniform merged_h num_intervals) in
+  let actual_q = map_of_assoc (quantiles data num_intervals) in
+
+  let (sum_se_mixed, n_mixed), (sum_se_merged, n_merged) =
+    stats 0 actual_q mixed_q merged_q (0., 0) (0., 0) in
+
+  let err_mixed = sqrt ((sum_se_mixed) /. (float n_mixed)) in
